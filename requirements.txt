@@ -5,3 +5,7 @@ python-decouple
 Pillow
 djangorestframework-simplejwt
 dj-config-url
+django-cors-headers
+redis
+celery
+

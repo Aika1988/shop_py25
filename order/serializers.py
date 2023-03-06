@@ -10,10 +10,10 @@ class OrderSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def create(self, validated_data):
-        amount = validated_data.get('amount') 
-        product = validated_data.get('product') 
+        amount = validated_data.get('amount') # 200
+        product = validated_data.get('product') # p1
 
-        if amount > product.amount:
+        if amount > product.amount: # 200 > 10
             raise serializers.ValidationError('Нет такого количества!')
         
         if amount == 0:
