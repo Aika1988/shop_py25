@@ -9,7 +9,7 @@ app = Celery("shop")
 
 app.config_from_object("django.conf.settings", namespace="CELERY")
 
-app.autodiscover_tasks()
+app.autodiscover_tasks() # tasks
 
 app.conf.beat_schedule = {
     'send_spam': {
